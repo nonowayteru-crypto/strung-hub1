@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="icon" type="image/x-icon" href="../logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left"></div>
+
+    <div class="right">
+      <div class="form-wrapper">
+        <h2>Đăng nhập StringHub</h2>
+
+        <form id="loginForm">
+          <div class="form-control">
+            <label>Email</label>
+            <input id="email" type="email" required>
+          </div>
+
+          <div class="form-control">
+            <label>Password</label>
+            <input id="password" type="password" required>
+          </div>
+
+          <button type="submit" id="btnLogin">Sign In</button>
+        </form>
+
+        <p>Chưa có tài khoản? <a href="../html/signup.html">Đăng ký</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

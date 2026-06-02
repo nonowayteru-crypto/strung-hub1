@@ -1,0 +1,76 @@
+/* =======================
+   BASE
+======================= */
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* =======================
+   CONTAINER / FORM
+======================= */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+
+.container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.container input,
+.container textarea,
+.container select,
+.container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.container button {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container button:hover {
+    background: rgb(58, 58, 58);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success {
+    color: green;
+    margin-top: 15px;
+    display: none;
+}
+
+/* =======================
+   COMMENTED CODE (GIỮ LẠI)
+======================= */
+/*
+.top a {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(69, 97, 150);
+}
+
+.top input {
+    margin-right: auto;
+    padding: 2px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+*/

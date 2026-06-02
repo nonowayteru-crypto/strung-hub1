@@ -1,0 +1,49 @@
+<!-- report.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Report | AQUAMEN</title>
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="../logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png">
+</head>
+<body>
+<h2>📢 Báo cáo sự cố</h2>
+
+<form onsubmit="sendReport(event)">
+  <label>Họ tên:</label>
+  <input type="text" required>
+
+  <label>Email:</label>
+  <input type="email" required>
+
+  <label>Loại báo cáo:</label>
+  <select>
+    <option>Lỗi website</option>
+    <option>Sản phẩm</option>
+    <option>Thanh toán</option>
+    <option>Khác</option>
+  </select>
+
+  <label>Nội dung:</label>
+  <textarea required></textarea>
+
+  <select>
+    <option>Mức độ thấp</option>
+    <option>Mức độ trung bình</option>
+    <option>Mức độ cao</option>
+</select>
+
+  <button type="submit">Gửi báo cáo</button>
+</form>
+
+<script>
+function sendReport(e){
+  e.preventDefault();
+  alert("✅ Báo cáo đã được gửi. Stringhub cảm ơn bạn!");
+}
+</script>
+</body>
+</html>

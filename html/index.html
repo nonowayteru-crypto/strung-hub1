@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stringhub - Trang chủ</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/account-menu.css">
+  <link rel="stylesheet" href="../css/search-style.css">
+  <link rel="icon" type="image/x-icon" href="../logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../logo/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png">
+</head>
+
+<body>
+  <header>
+    
+    <div class="navbar-container">
+      <a href="./contact.html">LIÊN HỆ</a>
+      <a href="./community.html">CỘNG ĐỒNG</a>
+      <a href="./donation.html">QUYÊN GÓP</a>
+      <a href="./report.html">BÁO CÁO</a>
+      <a href="./suggest.html">Ý TƯỞNG</a>
+      <a href="./feedback.html">PHẢN HỒI</a>
+      <div class="cart-menu">
+
+        <button id="cartBtn">
+          🛒
+          <span id="cartCount">0</span>
+        </button>
+
+        <div class="cart-dropdown hidden" id="cartDropdown">
+
+          <div id="cartItems">
+
+            <!-- render bằng JS -->
+
+          </div>
+
+          <div class="cart-footer">
+
+            <h3 id="cartTotal">
+              Tổng: 0đ
+            </h3>
+
+            <button id="confirmOrderBtn">Thanh Toán</button>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="order-menu">
+
+        <button id="orderBtn">
+          📃
+          <span id="orderCount">0</span>
+        </button>
+
+        <div class="order-dropdown hidden" id="orderDropdown">
+
+          <div id="orderItems">
+            <!-- render bằng JS -->
+          </div>
+
+          <div class="order-footer">
+
+            <h3 id="orderTotal">
+              0 đơn hàng
+            </h3>
+
+            <!-- <a href="../html/order.html">
+              Xem hóa đơn
+            </a> -->
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="search-box">
+
+        <input type="search" id="searchInput" placeholder="Tìm kiếm nhạc cụ..." />
+
+        <div class="search-dropdown hidden" id="searchDropdown">
+        </div>
+
+      </div>
+      <div class="account-menu">
+
+        <button id="accountBtn">
+          Tài khoản
+        </button>
+
+        <div class="dropdown hidden" id="dropdownMenu">
+
+          <a href="../html/CRUD.html" id="adminLink" class="hidden">
+            Admin Panel
+          </a>
+
+          <button id="btnLogout">
+            Đăng xuất
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-container">
+      <a href="../html/index.html">STRINGHUB</a>
+    </div>
+  </header>
+  <main>
+    <p style="padding: 20px; font-size: 30px;">DANH MỤC</p>
+    <div class="category">
+      <div class="category-card">
+        <img
+          src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAQmPK9R3RCW4oCXH2fNC-8IaTyjdxzxmGaSzF2iIOGtC0uI07PfTqqNuiebAbTxICjs2dnfUqNwIRUTSCE66SF1gQ3Xlau860WPOYdCNv"
+          alt="Organ" />
+        <p>ORGAN</p>
+
+        <a href="../html/piano-organ.html">>> Xem chi tiết</a>
+      </div>
+      <div class="category-card">
+        <img
+          src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR9S3ecTRCmv1QO1OG-23OdgsS8-uaZjm9Y-sFFWMpATwaeK1zO2AJIThK59abtR31dsJO4LAIuJ3yCECvX5vdjClMJv6PivxUYRrZOdd884Xp-rOS5XjkiFg"
+          alt="Organ" />
+        <p>PIANO CƠ</p>
+
+        <a href="../html/piano-co.html">>> Xem chi tiết</a>
+      </div>
+      <div class="category-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3vil0PjDSg3Oq1YT9PP0PyvHP7VyQnR_Dg&s"
+          alt="Organ" />
+        <p>PIANO ĐIỆN</p>
+        <a href="../html/piano-dien.html">>> Xem chi tiết</a>
+      </div>
+      <div class="category-card">
+        <img
+          src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/b21f261530174646985f322dcb95b7fe~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15592&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=e1be8f53&idc=my&from=2378011839"
+          alt="Organ" />
+        <p>PHỤ KIỆN</p>
+        <a href="../html/piano-accessories.html">>> Xem chi tiết</a>
+      </div>
+    </div>
+    <p style="padding: 20px; font-size: 30px;">GÓI THỊNH HÀNH</p>
+    <div class="category">
+      <div class="combo-card">
+        <img
+          src="../image/25027eec-a5ba-4487-a2be-c38e80aa8c13.png"
+          alt="Organ" />
+        <p>COMBO ĐÀN GUITAR</p>
+        <p>2.990.000 VNĐ</p>
+        <button id="addToCartBtn">Thêm vào giỏ hàng</button>
+      </div>
+      <div class="combo-card">
+        <img
+          src="../image/0c62da0f-33e3-4b15-b953-f87f179e63f4.png"
+          alt="Organ" />
+        <p>COMBO ĐÀN GUITAR</p>
+        <p>2.990.000 VNĐ</p>
+        <button id="addToCartBtn">Thêm vào giỏ hàng</button>
+      </div>
+      <div class="combo-card">
+        <img
+          src="../image/d7b8fa52-a647-4b70-b6d8-940e05aac13b.png"
+          alt="Organ" />
+        <p>COMBO ĐÀN GUITAR</p>
+        <p>2.990.000 VNĐ</p>
+        <button id="addToCartBtn">Thêm vào giỏ hàng</button>
+      </div>
+      <div class="combo-card">
+        <img
+          src="../image/65fb99b5-b282-410d-969d-dac7d87f5bb9.png"
+          alt="Organ" />
+        <p>COMBO ĐÀN GUITAR</p>
+        <p>2.990.000 VNĐ</p>
+        <button id="addToCartBtn">Thêm vào giỏ hàng</button>
+      </div>
+    </div>
+    <p></p>
+    <script>
+      (function () {
+        if (
+          !window.chatbase ||
+          window.chatbase("getState") !== "initialized"
+        ) {
+          window.chatbase = (...args) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(arguments);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "-8FDhZM1WwvtHXXjeS1sl";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-container">
+        <div class="footer-top">
+          <h2>STRINGHUB</h2>
+          <p>Nơi phân phối nhạc cụ chất lượng cao</p>
+        </div>
+
+        <div class="footer-content">
+          <div>
+            <a href="../html/about-us.html">
+              <h4>Về chúng tôi</h4>
+            </a>
+            <p>
+              Chúng tôi là một công ty chuyên bán nhạc cụ với chất lượng cao
+              và dịch vụ tốt nhất.
+            </p>
+          </div>
+
+          <div>
+            <a href="../html/contact.html">
+              <h4>Liên hệ</h4>
+            </a>
+            <p>0705567593</p>
+          </div>
+
+          <div>
+            <h4>Địa chỉ</h4>
+            <p>Hẻm 355 ,Phú Hòa Đông ,Củ Chi ,Tp HCM</p>
+          </div>
+
+          <div>
+            <h4>MXH</h4>
+            <a href="https://www.facebook.com/luu.huy.lam.2024/" target="_blank">
+              <h4>Facebook</h4>
+            </a><br />
+            <a href="https://www.tiktok.com/@luuhuylamhcm" target="_blank">
+              <h4>TikTok</h4>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="../js/index.js"></script>
+  <!-- <script src="../js/index.js"></script> -->
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/search.js"></script>
+  <script type="module" src="../js/cart.js"></script>
+  <script type="module" src="../js/order.js"></script>
+</body>
+
+</html>
