@@ -328,86 +328,88 @@ async function (orderData) {
 // CONFIRM ORDER
 // =======================
 if (confirmOrderBtn) {
+    console.log("Order JS loaded");
 
+    console.log(confirmOrderBtn);
     confirmOrderBtn.addEventListener(
         "click",
         async () => {
+            console.log("BUTTON CLICKED");
 
-            const cart =
-                JSON.parse(
-                    localStorage.getItem(
-                        "cart"
-                    )
-                ) || [];
+            const name =
+                customerName.value.trim();
 
-            if (cart.length === 0) {
+            const phone =
+                customerPhone.value.trim();
+
+            const address =
+                customerAddress.value.trim();
+
+            if (
+                !name ||
+                !phone ||
+                !address
+            ) {
 
                 alert(
-                    "Giỏ hàng trống"
+                    "Vui lòng nhập đầy đủ thông tin!"
                 );
 
                 return;
 
             }
 
-            // total
-            const total =
-                cart.reduce(
-                    (
-                        sum,
-                        item
-                    ) => {
-
-                        return (
-                            sum +
-                            (
-                                item.price *
-                                item.quantity
-                            )
-                        );
-
-                    },
-                    0
+            // lấy thông tin sản phẩm
+            const productInfo =
+                document.getElementById(
+                    "productInfo"
                 );
 
-            // order
+            if (!productInfo) {
+
+                alert(
+                    "Không tìm thấy thông tin sản phẩm!"
+                );
+
+                return;
+
+            }
+
             await addOrder({
 
                 name:
-                    cart[0]?.name ||
-                    "Đơn hàng",
+                    productInfo.dataset.name,
 
                 image:
-                    cart[0]?.image || "",
+                    productInfo.dataset.image,
 
-                total: total,
+                total:
+                    Number(
+                        productInfo.dataset.price
+                    ),
 
                 customerName:
-                    customerName.value,
+                    name,
 
                 phone:
-                    customerPhone.value,
+                    phone,
 
                 address:
-                    customerAddress.value,
-
-                items: cart,
+                    address,
 
                 status:
                     "Đang xử lý"
 
             });
 
-            // clear cart
-            localStorage.removeItem(
-                "cart"
-            );
+            // clear form
+            customerName.value = "";
+            customerPhone.value = "";
+            customerAddress.value = "";
 
             alert(
                 "Đặt hàng thành công!"
             );
-
-            location.reload();
 
         }
     );
