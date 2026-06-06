@@ -51,17 +51,16 @@ onAuthStateChanged(auth, (user) => {
   // chưa login
   if (!user) {
 
-    accountBtn.textContent =
-      "👤 Guest";
 
     adminLink.classList.add("hidden");
 
+    accountBtn.window.location.href = "../html/login.html";
     return;
   }
 
   // hiện email
   accountBtn.textContent =
-    `👤 ${user.email}`;
+    `${user.email}`;
 
   // admin account
   if (
